@@ -1,0 +1,145 @@
+@import "./variables.scss";
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainDiv {
+  height: 100%;
+  width: 100%;
+}
+
+.profile-div {
+  @include flex-row();
+  justify-content: space-between;
+}
+
+.profile-sub-div {
+  @include flex-row();
+  justify-content: center;
+  align-items: center;
+}
+
+.user-name {
+  color: $primaryColor;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.user-title {
+  font-size:20px;
+}
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  cursor: pointer;
+}
+
+.profile-hr-line {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+.flex-row {
+  @include flex-row();
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.flex-titles {
+  @include flex-column();
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-data {
+  @include flex-column();
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.search-title {
+  font-weight: bold;
+  font-size:22px;
+}
+
+.flex-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.flex-user-name {
+  color: $primaryColor;
+  font-size: $mediumFontSize;
+  margin-left: 10px;
+}
+
+.login-flex-row {
+  @include flex-row();
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchbar {
+  border: 1px solid gray !important;
+  border-radius: 6px;
+  padding: 10px;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 12px;
+}
+
+thead {
+  @include flex-row();
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid;
+}
+
+tbody {
+  @include flex-column();
+  height: 55vh;
+  overflow: auto;
+  border: 1px solid;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+.tbody-div:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tbody-div {
+  @include flex-row();
+  justify-content: space-between;
+  width: 100%;
+}
+
+.no-data-found {
+  font-size: 32px;
+  color: #a29999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
